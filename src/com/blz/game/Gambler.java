@@ -1,4 +1,4 @@
-package com.blz;
+package com.blz.game;
 
 public class Gambler {
     public static final int BET = 1;
@@ -6,6 +6,14 @@ public class Gambler {
     public static void main(String[] args) {
 
         int won = 0;
-        System.out.println("Initial Stake is " +AMOUNT+ "$ and bet is " +BET+"$");
+        int bet = (int) (Math.floor(Math.random()*10)%2);
+        if (bet == 1){
+            System.out.println("Won $1");
+            System.out.println("Initial Stake is $" +AMOUNT+ ", won $1 "+"and total is $100");
+        }else {
+            System.out.println("Loss $1");
+            System.out.println("Initial Stake is $" + AMOUNT + ", lost $1 "+"and total is $99");
+        }
     }
 }
+
